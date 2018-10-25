@@ -1,14 +1,13 @@
 <li class="nav-level">Menu Utama</li>
 
-<li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-chart"></i><span> Charts &amp; Maps</span><span class="label label-success menu-caption">New</span><i class="icon-arrow-down"></i></a>
+<li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icofont icofont-settings"></i><span> Pengaturan</span><span class="label label-success menu-caption">New</span><i class="icon-arrow-down"></i></a>
     <ul class="treeview-menu">
-        <li><a class="waves-effect waves-dark" href="float-chart.html"><i class="icon-arrow-right"></i> Float Charts</a></li>
-        <li><a class="waves-effect waves-dark" href="morris-chart.html"><i class="icon-arrow-right"></i> Morris Charts</a></li>
+        <li><a class="waves-effect waves-dark" href="<?php echo site_url('akun/list');?>"><i class="icofont icofont-users"></i> Akun</a></li>
+        <li><a class="waves-effect waves-dark" href="<?php echo site_url('level/list');?>"><i class="icofont icofont-chart-flow-1"></i> Level</a></li>
     </ul>
 </li>
-
 <li class="treeview">
-    <a class="waves-effect waves-dark" href="basic-table.html">
+    <a class="waves-effect waves-dark" href="<?php echo site_url('akun/list');?>">
         <i class="icon-list"></i><span> Table</span>
     </a>                
 </li>

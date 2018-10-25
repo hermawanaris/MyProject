@@ -1,89 +1,165 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+    <title>Dashboard</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+     <![endif]-->
 
-	<style type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <!-- Load view css disini-->
+    <?php $this->load->view('dashboard/_mycss');?>
+    <!-- Akhir Load view css -->
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
+ </head>
+ <body class="sidebar-mini fixed">
+    <div class="loader-bg">
+        <div class="loader-bar">
+        </div>
+    </div>
+    <div class="wrapper">
+    <!--   <div class="loader-bg">
+    <div class="loader-bar">
+    </div>
+</div> -->
+<!-- Navbar-->
+<header class="main-header-top hidden-print">
+    <a href="index.html" class="logo"><img class="img-fluid able-logo" src="<?php echo base_url();?>_assets/ablepro/assets/images/logo.png" alt="Theme-logo"></a>
+    <nav class="navbar navbar-static-top">
+        
+        <!-- Navbar Right Menu-->
+        <div class="navbar-custom-menu f-right">
+            
+        <ul class="top-nav">
+                <!--Notification Menu-->
+                    
+                
+                <li class="dropdown notification-menu">
+                    
+                    <ul class="dropdown-menu">
+                        
+                        <li class="bell-notification">
+                            
+                            </li>
+                            
+                                
+                            </ul>
+                        </li>
+                        <!-- chat dropdown -->
+                        
+                        <!-- window screen -->
+                        <li class="pc-rheader-submenu">
+                            <a href="#!" class="drop icon-circle" onclick="javascript:toggleFullScreen()">
+                                <i class="icon-size-fullscreen"></i>
+                            </a>
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+                        </li>
+                        <!-- User Menu-->
+                    </ul>
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
-<body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+                    <!-- search -->
+                   
+                    <!-- search end -->
+                </div>
+            </nav>
+        </header>
+        <!-- Side-Nav-->
+        <aside class="main-sidebar hidden-print " >
+            <section class="sidebar" id="sidebar-scroll">
+                
+                <div class="user-panel">
+                    <div class="f-left image"><img src="<?php echo base_url();?>_assets/ablepro/assets/images/avatar-1.png" alt="User Image" class="img-circle"></div>
+                    <div class="f-left info">
+                        <p>John Doe</p>
+                        <p class="designation">UX Designer <i class="icofont icofont-caret-down m-l-5"></i></p>
+                    </div>
+                </div>
+                <!-- sidebar profile Menu-->
+                <ul class="nav sidebar-menu extra-profile-list">
+                    <li>
+                        <a class="waves-effect waves-dark" href="profile.html">
+                            <i class="icon-user"></i>
+                            <span class="menu-text">View Profile</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="waves-effect waves-dark" href="javascript:void(0)">
+                            <i class="icon-settings"></i>
+                            <span class="menu-text">Settings</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="waves-effect waves-dark" href="javascript:void(0)">
+                            <i class="icon-logout"></i>
+                            <span class="menu-text">Logout</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Sidebar Menu-->
+                <ul class="sidebar-menu">
+                    <li class="nav-level">Navigation</li>
+                    <li class="active treeview">
+                        <a class="waves-effect waves-dark" href="index.html">
+                            <i class="icon-speedometer"></i><span> Dashboard</span>
+                        </a>                
+                    </li>
+                    <?php $this->load->view('dashboard/v_menu');?>
+                </ul>
+            </section>
+        </aside>
+        <!-- Sidebar chat start -->
+    </div>
 </div>
+<!-- Sidebar chat end-->
+<div class="content-wrapper">
+
+   <!-- Container-fluid starts -->
+   <!-- Main content starts -->
+   <div class="container-fluid">
+    <div class="row">
+        <div class="main-header">
+            <h4>ComingSoon</h4>
+        </div>
+        
+    </div>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- 3-1-block end -->
+
+<!-- 2-1 block start -->
+
+<!-- 2-1 block end -->
+</div>
+<!-- Main content ends -->
+<!-- Container-fluid ends -->
+
+</div>
+</div>
+
+<!-- Load view javascript disini -->
+<?php $this->load->view('dashboard/_myjs.php'); ?>
+<!-- Akhir Load view javascript -->
 
 </body>
 </html>

@@ -9,7 +9,10 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/icon/icofont/css/icofont.css">
     <!-- simple line icon -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/icon/simple-line-icons/css/simple-line-icons.css">
-
+    <!-- iconfont -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/icon/icofont/icofont.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/icon/icofont/icofont.min.css">
+    
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/plugins/bootstrap/css/bootstrap.min.css">
 
@@ -27,3 +30,6 @@
 
     <!--color css-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/css/color/color-1.min.css" id="color"/>
+
+    <!-- Tabel Custom -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>_assets/ablepro/assets/plugins/datatables/datatables.min.css">

@@ -32,6 +32,30 @@
 
     <!-- custom js -->
     <script type="text/javascript" src="<?php echo base_url();?>_assets/ablepro/assets/js/main.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>_assets/ablepro/assets/pages/dashboard.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>_assets/ablepro/assets/pages/elements.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>_assets/ablepro/assets/js/menu.min.js"></script>
+    
+    <!-- Tabel Custom -->
+    <script type="text/javascript" src="<?php echo base_url();?>_assets/ablepro/assets/plugins/datatables/datatables.min.js"></script>   
+    <script src="<?php echo base_url();?>_assets/ablepro/assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?php echo base_url();?>_assets/ablepro/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <!-- Tabel Custom -->
+    <script>
+    $(document).ready(function (){
+        var table = $('#example1').DataTable({
+            'responsive': true
+        });
+
+        // Handle click on "Expand All" button
+        $('#btn-show-all-children').on('click', function(){
+            // Expand row details
+            table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+        });
+
+        // Handle click on "Collapse All" button
+        $('#btn-hide-all-children').on('click', function(){
+            // Collapse row details
+            table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+        });
+    });
+    </script>
