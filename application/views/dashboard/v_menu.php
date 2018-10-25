@@ -1,9 +1,12 @@
+<?php $hal1 = $this->uri->segment(1);?>
+<?php $hal2 = $this->uri->segment(2);?>
+
 <li class="nav-level">Menu Utama</li>
 
-<li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icofont icofont-settings"></i><span> Pengaturan</span><span class="label label-success menu-caption">New</span><i class="icon-arrow-down"></i></a>
+<li class="<?=($hal1=='akses')?'active':'';?> treeview"><a class="waves-effect waves-dark" href="#!"><i class="icofont icofont-settings"></i><span> Pengaturan</span><span class="label label-success menu-caption">New</span><i class="icon-arrow-down"></i></a>
     <ul class="treeview-menu">
+        <li class="<?=($hal1=='akses')?'active':'';?>"><a class="waves-effect waves-dark" href="<?php echo site_url('akses');?>"><i class="icofont icofont-chart-flow-1"></i> Akses</a></li>
         <li><a class="waves-effect waves-dark" href="<?php echo site_url('akun/list');?>"><i class="icofont icofont-users"></i> Akun</a></li>
-        <li><a class="waves-effect waves-dark" href="<?php echo site_url('level/list');?>"><i class="icofont icofont-chart-flow-1"></i> Level</a></li>
     </ul>
 </li>
 <li class="treeview">

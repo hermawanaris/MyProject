@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <title> Login </title>
+	<title> Login </title>
+	
     <link rel="shortcut icon" href="<?php echo base_url();?>_assets/ablepro/assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="<?php echo base_url();?>_assets/ablepro/assets/images/favicon.ico" type="image/x-icon">
 
@@ -20,7 +21,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title"></h4>
-							<form method="POST">
+							<form method="POST" action="<?php echo site_url().'login/auth'?>">
 							 
 								<div class="form-group">
 									<label for="username">Username</label>

@@ -108,7 +108,7 @@
                 <!-- Sidebar Menu-->
                 <ul class="sidebar-menu">
                     <li class="nav-level">Navigation</li>
-                    <li class="active treeview">
+                    <li class="treeview">
                         <a class="waves-effect waves-dark" href="index.html">
                             <i class="icon-speedometer"></i><span> Dashboard</span>
                         </a>                
@@ -128,7 +128,7 @@
    <div class="container-fluid">
     <div class="row">
         <div class="main-header">
-            <h4>Master Level</h4>
+            <h4>Master Akses</h4>
             <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
                 <li class="breadcrumb-item">
                     <a href="index.html">
@@ -136,15 +136,16 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="#!">Daftar Level </a>
+                    <a href="#!">Daftar Akses </a>
                 </li>
-                <li class="breadcrumb-item"><a href="">Level</a>
+                <li class="breadcrumb-item"><a href="">Akses</a>
                 </li>
             </ol>
         </div>
         <div class="col-sm-12">
-            <?php $this->load->view('dashboard/level/v_level_list');?>      
-            <?php $this->load->view('dashboard/level/v_level_add');?>
+            <?php $this->load->view('dashboard/akses/v_akses_list');?>      
+            <?php $this->load->view('dashboard/akses/v_akses_add');?>     
+            <?php $this->load->view('dashboard/akses/v_akses_edit');?>
         </div>
     </div>
 </tr>
